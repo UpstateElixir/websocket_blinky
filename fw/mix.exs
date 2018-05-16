@@ -51,6 +51,7 @@ defmodule Fw.MixProject do
       {:nerves_network, "~> 0.3"},
       {:nerves_cell, github: "ghitchens/nerves_cell"},
       {:nerves_leds, "~> 0.8.0"},
+      {:ui, path: "../ui"},
     ] ++ system(target)
   end
 

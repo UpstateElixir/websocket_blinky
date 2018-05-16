@@ -38,7 +38,7 @@ config :nerves_network, :default,
 config :nerves_leds, names: [green: "led0"]
 
 config :ui, UiWeb.Endpoint,
-  url: [host: "localhost"],
+  url: [host: "192.168.1.12"],
   http: [port: 80],
   secret_key_base: "0ShjFYwRqHtxsfOl1AnzSxcSSpfMdO7lfWV6JDT1bi82E0D2DTGmDHFxlUwcsRJs",
   root: Path.dirname(__DIR__),
