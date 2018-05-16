@@ -10,7 +10,7 @@ defmodule Fw.Application do
   def start(_type, _args) do
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    Nerves.Leds.set green: :heartbeat
+    Nerves.Leds.set green: :false
     opts = [strategy: :one_for_one, name: Fw.Supervisor]
     Supervisor.start_link(children(@target), opts)
   end
