@@ -6,9 +6,9 @@ defmodule UiWeb.LedChannel do
     {:ok, socket}
   end
 
-  def handle_in("toggle", %{"body" => body}, socket) do
-    broadcast! socket, "toggle", %{body: body}
-    Leds.set "led0", true
+  def handle_in("toggle", %{"active" => active}, socket) do
+    broadcast! socket, "toggle", %{active: active}
+    Leds.set "led0", active
     {:noreply, socket}
   end
 end
